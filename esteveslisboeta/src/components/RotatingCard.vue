@@ -45,8 +45,8 @@ const props = defineProps({
 }
 
 .card {
-  width: 90vw;
-  max-width: 500px; /* Ensures a max width on larger screens */
+  width: 41vw;
+  max-width: 800px; /* Ensures a max width on larger screens */
   height: auto;
   aspect-ratio: 1; /* Maintains a square aspect ratio */
   transition: transform 0.6s;
