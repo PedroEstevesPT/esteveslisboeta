@@ -55,7 +55,7 @@ import RotatingCard from './components/RotatingCard.vue'
     <v-col  cols="auto" md="1" xs="1" class="text-center">
       <v-hover v-slot:default="{ isHovering }">
         <v-sheet>
-          <a href="https://spotify.com" target="_blank" class="d-block">
+          <a href="https://spotify.com" >
             <img
               src="https://res.cloudinary.com/dho8ay2wz/image/upload/v1723408294/spotify-green_cbhdq6.svg"
               alt="Spotify"
@@ -120,7 +120,17 @@ import RotatingCard from './components/RotatingCard.vue'
 
 </template>
 
+<style>
+body {
+  background-image: url('https://res.cloudinary.com/dho8ay2wz/image/upload/v1723422013/tile-grayedout-5_zawjsb.png');
+  background-repeat: repeat; /* Ensures the image repeats */
+  background-size: auto; /* Keeps the image at its original size */
+  background-attachment: fixed; /* Makes sure the background stays in place when scrolling */
+}
+</style>
+
 <style scoped>
+
 .left-aligned-text {
   text-align: left;
   margin-left: auto;
@@ -129,8 +139,8 @@ import RotatingCard from './components/RotatingCard.vue'
 }
 
 .icon {
-  height: 50px;
-  width: 50px;
+  background: none !important; /* Ensures no background color is applied */
+  background-color: transparent !important;
   transition: filter 300ms ease-in-out, transform 300ms ease-in-out;
 }
 
