@@ -39,12 +39,13 @@ import RotatingCard from './components/RotatingCard.vue'
 </script>
 
 <style>
+
 /* Ensure the html and body don't scroll */
 html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  height: 100%; /* Make sure body and html take full height */
+  overflow: hidden; /* Disable scrolling */
+  height: 100%; /* Ensure full height */
 }
 
 /* Page container to hold the video and card */
@@ -52,7 +53,7 @@ html, body {
   position: relative;
   width: 100%;
   height: 100vh; /* Full viewport height */
-  overflow: hidden;
+  overflow: hidden; /* Prevent scrolling */
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   align-items: center; /* Center items horizontally */
@@ -77,7 +78,7 @@ html, body {
   justify-content: center;
   align-items: center;
   z-index: 1; /* Ensures the card is above the video */
-  margin-bottom: 20px; /* Space between card and toolbar */
+  margin-bottom: 10px; /* Space between card and toolbar */
 }
 
 /* Toolbar styles */
@@ -87,6 +88,7 @@ html, body {
   align-items: center;
   gap: 20px; /* Space between icons */
   z-index: 1; /* Ensures the toolbar is above the video */
+  margin-top: 10px; /* Space between card and toolbar */
 }
 
 /* Toolbar item styles */
@@ -147,19 +149,20 @@ html, body {
 
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
-  /* Reduce the gap between the card and the toolbar on mobile */
   .rotating-card-container {
-    height: calc(100vh - 100px); /* Adjust height to reduce distance */
+    height: auto; /* Allow container to grow as needed */
+    margin-bottom: 20px; /* Adjust space between card and toolbar */
   }
 
   .toolbar {
-    gap: 10px; /* Reduce space between icons */
-    margin-top: -90px; /* Move toolbar closer to the card */
+    margin-top: 20px; /* Ensure toolbar is closer to the card */
+    gap: 18px; /* Reduce space between icons */
   }
 
   .toolbar-icon {
-    width: 45px; /* Adjust icon size for smaller screens */
-    height: 45px;
+    width: 48px; /* Adjust icon size for smaller screens */
+    height: 48px;
   }
 }
+
 </style>
