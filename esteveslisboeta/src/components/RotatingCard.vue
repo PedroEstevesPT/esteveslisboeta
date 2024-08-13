@@ -42,10 +42,12 @@ const props = defineProps({
 .card-container {
   perspective: 1000px;
   max-width: 100%; /* Ensures it doesn't overflow the container */
+  display: flex; /* Ensure container uses flexbox */
+  justify-content: center; /* Center card horizontally */
 }
 
 .card {
-  width: 41vw;
+  width: 50vw; /* Adjust size for larger screens */
   max-width: 800px; /* Ensures a max width on larger screens */
   height: auto;
   aspect-ratio: 1; /* Maintains a square aspect ratio */
@@ -89,15 +91,30 @@ const props = defineProps({
 /* Media Queries */
 @media (max-width: 600px) {
   .card {
-    max-width: 100vw; /* Adjusts card size on smaller screens */
+    width: 80vw; /* Adjusts card size on smaller screens */
     height: auto; /* Ensures it scales properly on mobile */
   }
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
   .card {
-    max-width: 70vw;
-    height: auto; /* Ensures it scales properly on tablets */
+    width: 30vw; /* Adjust size for tablets */
+    height: auto; /* Ensures it scales properly */
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1920px) {
+  .card {
+    width: 40vw; /* Adjust size for tablets */
+    height: auto; /* Ensures it scales properly */
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 5024px) {
+  .card {
+    width: 50vw; /* Adjust size for tablets */
+    height: auto; /* Ensures it scales properly */
   }
 }
 </style>
