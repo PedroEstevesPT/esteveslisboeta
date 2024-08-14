@@ -71,9 +71,14 @@ html, body {
   z-index: -1; /* Keeps the video behind the content */
 }
 
+.rotating-card img {
+  filter: brightness(1); /* Adjust brightness as needed */
+}
+
 /* Container to center the rotating card and toolbar */
 .rotating-card-container {
   display: flex;
+  filter: none; /* Ensure no filter is applied */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -138,6 +143,7 @@ html, body {
   }
 
   .rotating-card-container {
+    filter: none; /* Ensure no filter is applied */
     margin-bottom: 40px; /* Increase space between card and toolbar */
   }
 
@@ -149,7 +155,13 @@ html, body {
 
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
+
+  .rotating-card img {
+  filter: brightness(1); /* Adjust brightness as needed */
+}
+
   .rotating-card-container {
+    filter: none; /* Ensure no filter is applied */
     height: auto; /* Allow container to grow as needed */
     margin-bottom: 20px; /* Adjust space between card and toolbar */
   }
