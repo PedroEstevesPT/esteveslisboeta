@@ -32,19 +32,20 @@
     </div>
   </div>
 
+  
   <div class="container">
     <div class="horizontal-scrolling-wrapper">
       <div class="horizontal-scrolling-items">
         <div class="horizontal-scrolling-items__item">
           &nbsp &nbsp &nbsp <b>SABES QUE ADORO SAIR CONTIGO</b> é o EP de estreia de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
-          Este EP foi misturado e masterizado por Pedro Joaquim Borges (a única excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta). 
+          Este EP foi misturado e masterizado por Pedro Joaquim Borges (a excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta). 
           Pedro Joaquim Borges tocou bateria em "Joana (Chamei o teu Nome)", kick em "Sabes Que Adoro Sair Contigo" e co-produziu a percussão na "Inesquecível Inês". 
           El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa". 
           Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina Wykowska.
         </div>
         <div class="horizontal-scrolling-items__item">
           &nbsp &nbsp &nbsp <b>SABES QUE ADORO SAIR CONTIGO</b> é o EP de estreia de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
-          Este EP foi misturado e masterizado por Pedro Joaquim Borges (a única excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta). 
+          Este EP foi misturado e masterizado por Pedro Joaquim Borges (a excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta). 
           Pedro Joaquim Borges tocou bateria em "Joana (Chamei o teu Nome)", kick em "Sabes Que Adoro Sair Contigo" e co-produziu a percussão na "Inesquecível Inês". 
           El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa". 
           Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina Wykowska.
@@ -52,7 +53,7 @@
       </div>
     </div>
   </div>
-  
+   
 </template>
 
 <script setup>
@@ -60,6 +61,14 @@ import RotatingCard from './components/RotatingCard.vue'
 </script>
 
 <style>
+
+
+@font-face {
+    font-family: GraublauWeb;
+    src: url("src/font/PeaceBegin.ttf") format("opentype");
+}
+
+
 
 /* Ensure the html and body don't scroll */
 html, body {
@@ -248,7 +257,8 @@ html, body {
 .horizontal-scrolling-items {
   background-color: white;
   opacity: 90%;
-  color: rgb(2, 105, 189); /* Change text color */
+  color: rgb(15, 156, 221); /* Change text color */
+  font-family: GraublauWeb;
 
   display: flex;
   white-space: nowrap;
@@ -270,6 +280,13 @@ html, body {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .container {
+    display: none; /* Hide the container on mobile devices */
   }
 }
 
