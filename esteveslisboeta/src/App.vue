@@ -32,19 +32,26 @@
     </div>
   </div>
 
-  <div class="container" >
-    <div class="horizontal-scrolling-items" >
-      <div class="horizontal-scrolling-items__item">
-        Sabes Que Adoro Sair Contigo é o EP de estreia de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
-        Este EP foi misturado e masterizado por Pedro Joaqum Borges (A única excepção foi a @Canção da Meretriz" que foi misturada por Esteves Lisboeta). 
-        Pedro Joaquim Borges tocou bateria na "Joana (Chamei o teu Nome)", kick no "Sabes Que Adoro Sair Contigo" e co-produziu a percussão na Inesquecivel Inês. 
-        El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa". 
-        Carlota Leite tirou as fotografias da capa e contra-capa e a Paulina Wykowska editou-as e fez o lettering.
+  <div class="container">
+    <div class="horizontal-scrolling-wrapper">
+      <div class="horizontal-scrolling-items">
+        <div class="horizontal-scrolling-items__item">
+          &nbsp &nbsp &nbsp SABES QUE ADORO SAIR CONTIGO é o EP de estreia de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
+          Este EP foi misturado e masterizado por Pedro Joaquim Borges (a única excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta). 
+          Pedro Joaquim Borges tocou bateria em "Joana (Chamei o teu Nome)", kick em "Sabes Que Adoro Sair Contigo" e co-produziu a percussão na "Inesquecivel Inês". 
+          El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa". 
+          Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina Wykowska.
+        </div>
+        <div class="horizontal-scrolling-items__item">
+          &nbsp &nbsp &nbsp SABES QUE ADORO SAIR CONTIGO é o EP de estreia de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
+          Este EP foi misturado e masterizado por Pedro Joaquim Borges (A única excepção é a Canção da Meretriz, misturada por Esteves Lisboeta). 
+          Pedro Joaquim Borges tocou bateria em "Joana (Chamei O Teu Nome)", kick em "Sabes Que Adoro Sair Contigo" e co-produziu a percussão na Inesquecivel Inês. 
+          El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa". 
+          Carlota Leite tirou as fotografias da capa e contra-capa e a Paulina Wykowska editou-as e fez o lettering.
+        </div>
       </div>
     </div>
   </div>
-
-
   
 </template>
 
@@ -193,39 +200,76 @@ html, body {
 
 /* Animation for infinite horizontal scrolling */
 @keyframes infiniteScroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
-/* Container for horizontal scrolling items */
+
+/* Wrapper for horizontal scrolling with fade effect */
+.horizontal-scrolling-wrapper {
+  position: relative; /* Ensure the fade effect is positioned correctly */
+  display: flex;
+  flex-direction: row;
+  width: 100%; /* Full width to ensure smooth scrolling */
+  overflow: hidden; /* Hide overflow to keep fade effect visible only at edges */
+}
+
+/* Fading effect overlay for horizontal scrolling */
+.horizontal-scrolling-wrapper::before,
+.horizontal-scrolling-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 20px; /* Adjust the width of the fade effect */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); /* Adjust color and transparency */
+  pointer-events: none; /* Ensure it does not interfere with user interactions */
+}
+
+.horizontal-scrolling-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+}
+
+.horizontal-scrolling-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+}
+
 .container {
-
-   /*overflow-x: hidden; */
+  overflow: hidden;
   position: relative;
-  padding-bottom: 90px; /* Space at the bottom */
+  padding-bottom: 90px;
   display: flex;
-  justify-content: center; /* Centers the scrolling items horizontally */
+  justify-content: center;
 }
 
-/* Horizontal scrolling items styling */
+/* Scrolling items */
 .horizontal-scrolling-items {
+  background-color: white;
+
   display: flex;
-  font-size: 40px;
- /* width: 200%;  Double the width for smooth looping */
-  animation-name: infiniteScroll;
-  animation-duration: 40s; /* Faster scrolling speed */
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  margin-top: 20px; /* Space above the scrolling items */
-  margin-bottom: 20px; /* Space below the scrolling items */
+  white-space: nowrap;
+  animation: continuousScroll 70s linear infinite;
 }
 
-/* Each scrolling item is duplicated for seamless scrolling */
+/* Each scrolling item */
 .horizontal-scrolling-items__item {
-  background-color: white;
+  padding: 0 50px; /* Adjust padding if needed */
+  font-size: 40px;
   white-space: nowrap;
   display: inline-block;
-  width: 100%; /* Ensure the item occupies half the width */
-  text-align: center; /* Center the text */
 }
+
+/* Continuous scrolling animation */
+@keyframes continuousScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
 </style>
