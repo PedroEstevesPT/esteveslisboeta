@@ -31,8 +31,22 @@
       </a>
     </div>
   </div>
-</template>
 
+  <div class="container" >
+    <div class="horizontal-scrolling-items" >
+      <div class="horizontal-scrolling-items__item">
+        Sabes Que Adoro Sair Contigo é o EP de estreia de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
+        Este EP foi misturado e masterizado por Pedro Joaqum Borges (A única excepção foi a @Canção da Meretriz" que foi misturada por Esteves Lisboeta). 
+        Pedro Joaquim Borges tocou bateria na "Joana (Chamei o teu Nome)", kick no "Sabes Que Adoro Sair Contigo" e co-produziu a percussão na Inesquecivel Inês. 
+        El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa". 
+        Carlota Leite tirou as fotografias da capa e contra-capa e a Paulina Wykowska editou-as e fez o lettering.
+      </div>
+    </div>
+  </div>
+
+
+  
+</template>
 
 <script setup>
 import RotatingCard from './components/RotatingCard.vue'
@@ -157,8 +171,8 @@ html, body {
 @media (max-width: 768px) {
 
   .rotating-card img {
-  filter: brightness(1); /* Adjust brightness as needed */
-}
+    filter: brightness(1); /* Adjust brightness as needed */
+  }
 
   .rotating-card-container {
     filter: none; /* Ensure no filter is applied */
@@ -177,4 +191,41 @@ html, body {
   }
 }
 
+/* Animation for infinite horizontal scrolling */
+@keyframes infiniteScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/* Container for horizontal scrolling items */
+.container {
+
+   /*overflow-x: hidden; */
+  position: relative;
+  padding-bottom: 90px; /* Space at the bottom */
+  display: flex;
+  justify-content: center; /* Centers the scrolling items horizontally */
+}
+
+/* Horizontal scrolling items styling */
+.horizontal-scrolling-items {
+  display: flex;
+  font-size: 40px;
+ /* width: 200%;  Double the width for smooth looping */
+  animation-name: infiniteScroll;
+  animation-duration: 40s; /* Faster scrolling speed */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  margin-top: 20px; /* Space above the scrolling items */
+  margin-bottom: 20px; /* Space below the scrolling items */
+}
+
+/* Each scrolling item is duplicated for seamless scrolling */
+.horizontal-scrolling-items__item {
+  background-color: white;
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%; /* Ensure the item occupies half the width */
+  text-align: center; /* Center the text */
+}
 </style>
