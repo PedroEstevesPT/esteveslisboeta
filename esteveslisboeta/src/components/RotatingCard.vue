@@ -106,14 +106,14 @@ const props = defineProps({
 
 @media (min-width: 1024px) and (max-width: 1920px) {
   .card {
-    width: 40vw; /* Adjust size for tablets */
+    width: 31vw; /* Adjust size for tablets */
     height: auto; /* Ensures it scales properly */
   }
 }
 
 @media (min-width: 1920px) and (max-width: 5024px) {
   .card {
-    width: 50vw; /* Adjust size for tablets */
+    width: 35vw; /* Adjust size for tablets */
     height: auto; /* Ensures it scales properly */
   }
 }

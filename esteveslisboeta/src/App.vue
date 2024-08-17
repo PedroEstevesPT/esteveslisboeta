@@ -36,14 +36,14 @@
     <div class="horizontal-scrolling-wrapper">
       <div class="horizontal-scrolling-items">
         <div class="horizontal-scrolling-items__item">
-          &nbsp &nbsp &nbsp SABES QUE ADORO SAIR CONTIGO é o EP de estreia de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
+          &nbsp &nbsp &nbsp <b>SABES QUE ADORO SAIR CONTIGO</b> é o EP de estreia de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
           Este EP foi misturado e masterizado por Pedro Joaquim Borges (a única excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta). 
           Pedro Joaquim Borges tocou bateria em "Joana (Chamei o teu Nome)", kick em "Sabes Que Adoro Sair Contigo" e co-produziu a percussão na "Inesquecível Inês". 
           El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa". 
           Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina Wykowska.
         </div>
         <div class="horizontal-scrolling-items__item">
-          &nbsp &nbsp &nbsp SABES QUE ADORO SAIR CONTIGO é o EP de estreia de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
+          &nbsp &nbsp &nbsp <b>SABES QUE ADORO SAIR CONTIGO</b> é o EP de estreia de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
           Este EP foi misturado e masterizado por Pedro Joaquim Borges (a única excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta). 
           Pedro Joaquim Borges tocou bateria em "Joana (Chamei o teu Nome)", kick em "Sabes Que Adoro Sair Contigo" e co-produziu a percussão na "Inesquecível Inês". 
           El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa". 
@@ -247,6 +247,8 @@ html, body {
 /* Scrolling items */
 .horizontal-scrolling-items {
   background-color: white;
+  opacity: 90%;
+  color: rgb(2, 105, 189); /* Change text color */
 
   display: flex;
   white-space: nowrap;
