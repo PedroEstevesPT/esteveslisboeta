@@ -38,16 +38,16 @@
         <div class="horizontal-scrolling-items__item">
           &nbsp &nbsp &nbsp SABES QUE ADORO SAIR CONTIGO é o EP de estreia de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
           Este EP foi misturado e masterizado por Pedro Joaquim Borges (a única excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta). 
-          Pedro Joaquim Borges tocou bateria em "Joana (Chamei o teu Nome)", kick em "Sabes Que Adoro Sair Contigo" e co-produziu a percussão na "Inesquecivel Inês". 
+          Pedro Joaquim Borges tocou bateria em "Joana (Chamei o teu Nome)", kick em "Sabes Que Adoro Sair Contigo" e co-produziu a percussão na "Inesquecível Inês". 
           El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa". 
           Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina Wykowska.
         </div>
         <div class="horizontal-scrolling-items__item">
           &nbsp &nbsp &nbsp SABES QUE ADORO SAIR CONTIGO é o EP de estreia de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
-          Este EP foi misturado e masterizado por Pedro Joaquim Borges (A única excepção é a Canção da Meretriz, misturada por Esteves Lisboeta). 
-          Pedro Joaquim Borges tocou bateria em "Joana (Chamei O Teu Nome)", kick em "Sabes Que Adoro Sair Contigo" e co-produziu a percussão na Inesquecivel Inês. 
+          Este EP foi misturado e masterizado por Pedro Joaquim Borges (a única excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta). 
+          Pedro Joaquim Borges tocou bateria em "Joana (Chamei o teu Nome)", kick em "Sabes Que Adoro Sair Contigo" e co-produziu a percussão na "Inesquecível Inês". 
           El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa". 
-          Carlota Leite tirou as fotografias da capa e contra-capa e a Paulina Wykowska editou-as e fez o lettering.
+          Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina Wykowska.
         </div>
       </div>
     </div>
