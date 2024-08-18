@@ -79,6 +79,8 @@ html, body {
   padding: 0;
   overflow: hidden; /* Disable scrolling */
   height: 100%; /* Ensure full height */
+  touch-action: none; /* Prevent touch scrolling */
+
 }
 
 /* Page container to hold the video and card */
@@ -199,6 +201,7 @@ html, body {
   padding-bottom: 90px;
   display: flex;
   justify-content: center;
+  touch-action: none; /* Disable touch scrolling */
 }
 
 /* Scrolling items */
