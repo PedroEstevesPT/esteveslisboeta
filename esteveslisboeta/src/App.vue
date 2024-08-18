@@ -34,28 +34,28 @@
     </div>
   </div>
 
-  
-  <div class="container animate__animated animate__fadeIn" >
-    <div class="horizontal-scrolling-wrapper">
-      <div class="horizontal-scrolling-items">
-        <div class="horizontal-scrolling-items__item">
-          &nbsp &nbsp &nbsp <b>SABES QUE ADORO SAIR CONTIGO</b> é o 1º EP de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
-          Pedro Joaquim Borges tocou bateria em "Joana (Chamei o teu Nome)", kick em "Sabes Que Adoro Sair Contigo", co-produziu a percussão na "Inesquecível Inês",
-          masterizou e misturou o EP (a excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta).
-          El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa".
-          Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina Wykowska.
-        </div>
-        <div class="horizontal-scrolling-items__item">
-          &nbsp &nbsp &nbsp <b>SABES QUE ADORO SAIR CONTIGO</b> é o 1º EP de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
-          Pedro Joaquim Borges tocou bateria em "Joana (Chamei o teu Nome)", kick em "Sabes Que Adoro Sair Contigo", co-produziu a percussão na "Inesquecível Inês",
-          masterizou e misturou o EP (a excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta).
-          El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa".
-          Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina Wykowska.
+  <div style="display: flex; justify-content: center; text-align:center;">
+    <div class="container animate__animated animate__fadeIn"  style="width: 85vw; margin: 0 auto;  display: inline-block; ">
+      <div class="horizontal-scrolling-wrapper">
+        <div class="horizontal-scrolling-items">
+          <div class="horizontal-scrolling-items__item">
+            &nbsp &nbsp &nbsp <b>SABES QUE ADORO SAIR CONTIGO</b> é o 1º EP de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
+            Pedro Joaquim Borges tocou bateria em "Joana (Chamei o teu Nome)", kick em "Sabes Que Adoro Sair Contigo", co-produziu a percussão na "Inesquecível Inês",
+            masterizou e misturou o EP (a excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta).
+            El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa".
+            Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina Wykowska.
+          </div>
+          <div class="horizontal-scrolling-items__item">
+            &nbsp &nbsp &nbsp <b>SABES QUE ADORO SAIR CONTIGO</b> é o 1º EP de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
+            Pedro Joaquim Borges tocou bateria em "Joana (Chamei o teu Nome)", kick em "Sabes Que Adoro Sair Contigo", co-produziu a percussão na "Inesquecível Inês",
+            masterizou e misturou o EP (a excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta).
+            El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa".
+            Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina Wykowska.
+          </div>
         </div>
       </div>
     </div>
   </div>
-   
 </template>
 
 <script setup>
@@ -85,7 +85,7 @@ html, body {
 .page-container {
   position: relative;
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 90vh; /* Full viewport height */
   overflow: hidden; /* Prevent scrolling */
   display: flex;
   flex-direction: column; /* Stack elements vertically */
@@ -153,62 +153,7 @@ html, body {
   transform: scale(1.2); /* Increase size by 20% on hover */
 }
 
-/* Media Query for Tablets */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .rotating-card-container {
-    transform: scale(1.2); /* Scale up the rotating card */
-  }
 
-  .toolbar {
-    margin-bottom: 20px; /* Adjust margin to keep consistent spacing */
-  }
-
-  .toolbar-icon {
-    width: 55px; /* Slightly reduce icon size for better balance */
-    height: 55px;
-  }
-}
-
-/* Media Query for Laptops */
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .page-container {
-    justify-content: center; /* Ensure content is centered vertically */
-  }
-
-  .rotating-card-container {
-    filter: none; /* Ensure no filter is applied */
-    margin-bottom: 40px; /* Increase space between card and toolbar */
-  }
-
-  .toolbar {
-    margin-top: 0; /* Remove extra margin */
-    margin-bottom: 40px; /* Add margin at the bottom */
-  }
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-
-  .rotating-card img {
-    filter: brightness(1); /* Adjust brightness as needed */
-  }
-
-  .rotating-card-container {
-    filter: none; /* Ensure no filter is applied */
-    height: auto; /* Allow container to grow as needed */
-    margin-bottom: 20px; /* Adjust space between card and toolbar */
-  }
-
-  .toolbar {
-    margin-top: 20px; /* Ensure toolbar is closer to the card */
-    gap: 18px; /* Reduce space between icons */
-  }
-
-  .toolbar-icon {
-    width: 48px; /* Adjust icon size for smaller screens */
-    height: 48px;
-  }
-}
 
 /* Animation for infinite horizontal scrolling */
 @keyframes infiniteScroll {
@@ -261,8 +206,7 @@ html, body {
   background-color: white;
   opacity: 90%;
   color: rgb(15, 156, 221); /* Change text color */
-  font-family: GraublauWeb;
-
+  /*font-family: GraublauWeb; */
   display: flex;
   white-space: nowrap;
   animation: continuousScroll 70s linear infinite;
@@ -271,7 +215,7 @@ html, body {
 /* Each scrolling item */
 .horizontal-scrolling-items__item {
   padding: 0 50px; /* Adjust padding if needed */
-  font-size: 40px;
+  font-size: 35px;
   white-space: nowrap;
   display: inline-block;
 }
@@ -287,9 +231,72 @@ html, body {
 }
 
 /* Media Query for Mobile Devices */
-@media (max-width: 1025px) {
-  .container {
-    display: none; /* Hide the container on mobile devices */
+@media (max-width: 768px) {
+
+.horizontal-scrolling-items__item {
+  font-size: 20px;
+}
+
+.page-container{
+   padding-top: 20px;
+}
+
+.rotating-card img {
+  filter: brightness(1); /* Adjust brightness as needed */
+}
+
+.rotating-card-container {
+  filter: none; /* Ensure no filter is applied */
+  height: auto; /* Allow container to grow as needed */
+  margin-bottom: 20px; /* Adjust space between card and toolbar */
+}
+
+.toolbar {
+  margin-top: 20px; /* Ensure toolbar is closer to the card */
+  gap: 18px; /* Reduce space between icons */
+}
+
+.toolbar-icon {
+  width: 48px; /* Adjust icon size for smaller screens */
+  height: 48px;
+}
+}
+
+/* Media Query for Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .rotating-card-container {
+    transform: scale(1.2); /* Scale up the rotating card */
+  }
+
+  .horizontal-scrolling-items__item {
+    font-size: 20px;
+  }
+
+
+  .toolbar {
+    margin-bottom: 20px; /* Adjust margin to keep consistent spacing */
+  }
+
+  .toolbar-icon {
+    width: 55px; /* Slightly reduce icon size for better balance */
+    height: 55px;
+  }
+}
+
+/* Media Query for Laptops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .page-container {
+    justify-content: center; /* Ensure content is centered vertically */
+  }
+
+  .rotating-card-container {
+    filter: none; /* Ensure no filter is applied */
+    margin-bottom: 40px; /* Increase space between card and toolbar */
+  }
+
+  .toolbar {
+    margin-top: 0; /* Remove extra margin */
+    margin-bottom: 40px; /* Add margin at the bottom */
   }
 }
 
