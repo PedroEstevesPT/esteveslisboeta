@@ -100,14 +100,14 @@ const props = defineProps({
   }
 }
 
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1020px) {
   .card {
-    width: 30vw; 
+    width: 50vw; 
     height: auto; 
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1399px) {
+@media (min-width: 1021px) and (max-width: 1399px) {
   .card {
     width: 34vw; 
     height: auto; 
