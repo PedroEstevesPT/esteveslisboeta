@@ -41,16 +41,16 @@ const props = defineProps({
 <style scoped>
 .card-container {
   perspective: 1000px;
-  max-width: 100%; /* Ensures it doesn't overflow the container */
-  display: flex; /* Ensure container uses flexbox */
-  justify-content: center; /* Center card horizontally */
+  max-width: 100%; 
+  display: flex; 
+  justify-content: center; 
 }
 
 .card {
-  width: 50vw; /* Adjust size for larger screens */
-  max-width: 800px; /* Ensures a max width on larger screens */
+  width: 50vw; 
+  max-width: 800px; 
   height: auto;
-  aspect-ratio: 1; /* Maintains a square aspect ratio */
+  aspect-ratio: 1; 
   transition: transform 0.6s;
   transform-style: preserve-3d;
   position: relative;
@@ -88,33 +88,50 @@ const props = defineProps({
   object-fit: cover;
 }
 
+.edge-browser .card-image {
+  filter: brightness(1.1); /* Adjust for Edge */
+}
+
 /* Media Queries */
 @media (max-width: 600px) {
   .card {
-    width: 80vw; /* Adjusts card size on smaller screens */
-    height: auto; /* Ensures it scales properly on mobile */
+    width: 80vw; 
+    height: auto; 
   }
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
   .card {
-    width: 30vw; /* Adjust size for tablets */
-    height: auto; /* Ensures it scales properly */
+    width: 30vw; 
+    height: auto; 
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1399px) {
+  .card {
+    width: 34vw; 
+    height: auto; 
   }
 }
 
 
-@media (min-width: 1024px) and (max-width: 1920px) {
+@media (min-width: 1400px) and (max-width: 1920px) {
   .card {
-    width: 31vw; /* Adjust size for tablets */
-    height: auto; /* Ensures it scales properly */
+    width: 31vw; 
+    height: auto; 
   }
 }
 
 @media (min-width: 1920px) and (max-width: 5024px) {
   .card {
-    width: 35vw; /* Adjust size for tablets */
-    height: auto; /* Ensures it scales properly */
+    width: 35vw; 
+    height: auto; 
   }
 }
 </style>
+
+<script>
+  if (navigator.userAgent.indexOf("Edg") !== -1) {
+    document.documentElement.classList.add('edge-browser');
+  }
+</script>
