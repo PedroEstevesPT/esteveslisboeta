@@ -275,9 +275,14 @@ html, body {
     font-size: 20px;
   }
 
+  .page-container{
+   margin-top: 80px;
+  }
+
 
   .toolbar {
     margin-bottom: 20px; /* Adjust margin to keep consistent spacing */
+    margin-top: 50px;
   }
 
   .toolbar-icon {
@@ -298,7 +303,6 @@ html, body {
   }
 
   .toolbar {
-    margin-top: 0; /* Remove extra margin */
     margin-bottom: 40px; /* Add margin at the bottom */
   }
 }
