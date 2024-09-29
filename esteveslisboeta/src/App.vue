@@ -35,13 +35,14 @@
   </div>
 
   <div style="display: flex; justify-content: center; text-align:center;">
-    <div class="container animate__animated animate__fadeIn"  style="width: 85vw; margin: 0 auto;  display: inline-block; ">
+    <div class="container animate__animated animate__fadeIn"  style="width: 85vw; margin: 0 auto;  display: inline-block; margin-bottom: 1%;">
       <div class="horizontal-scrolling-wrapper">
         <div class="horizontal-scrolling-items">
           <div class="horizontal-scrolling-items__item">
             &nbsp &nbsp &nbsp <b>SABES QUE ADORO SAIR CONTIGO</b> é o 1º EP de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
             Pedro Joaquim Borges produziu a bateria em "Joana (Chamei O Teu Nome)", kick em "Sabes Que Adoro Sair Contigo", co-produziu a percussão na "Inesquecível Inês",
             masterizou e misturou o EP (a excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta).
+            Gabriel Silva fez a preparação de mistura na Inesquecível Inês.
             El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa".
             Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina Wykowska.
           </div>
@@ -93,6 +94,7 @@ html, body {
   flex-direction: column; /* Stack elements vertically */
   align-items: center; /* Center items horizontally */
   justify-content: center; /* Center content vertically */
+  margin-top: 2%;
 }
 
 /* Background video that covers the entire viewport */
