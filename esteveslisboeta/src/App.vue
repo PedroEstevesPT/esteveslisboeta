@@ -19,16 +19,16 @@
     
     <!-- Toolbar -->
     <div class="toolbar animate__animated animate__fadeIn">
-      <a href="https://bandcamp.com" target="_blank" class="toolbar-item svg-wrapper">
+      <a href="https://www.instagram.com/esteves.lisboeta/" target="_blank" class="toolbar-item svg-wrapper">
         <img src="https://res.cloudinary.com/dho8ay2wz/image/upload/v1723412632/instagram_ujtrtk.png" alt="Bandcamp" class="toolbar-icon">
       </a>
-      <a href="https://bandcamp.com" target="_blank" class="toolbar-item svg-wrapper">
+      <a href="https://open.spotify.com/album/7ruRgT7n8LX0HGNkMwJI8J" target="_blank" class="toolbar-item svg-wrapper">
         <img src="https://res.cloudinary.com/dho8ay2wz/image/upload/v1723408294/spotify-green_cbhdq6.svg" alt="Bandcamp" class="toolbar-icon">
       </a>
-      <a href="https://instagram.com" target="_blank" class="toolbar-item svg-wrapper">
+      <a href="https://esteveslisboeta.bandcamp.com/album/sabes-que-adoro-sair-contigo" target="_blank" class="toolbar-item svg-wrapper">
         <img src="https://res.cloudinary.com/dho8ay2wz/image/upload/v1723584042/esteveslisboeta-site/bandcamp-blue_szs36d.svg" alt="Bandcamp" class="toolbar-icon">
       </a>
-      <a href="https://instagram.com" target="_blank" class="toolbar-item svg-wrapper">
+      <a href="https://www.youtube.com/playlist?list=OLAK5uy_lwNsjq8B1IHtGpTP_DtvGMBT8qGdGEoic" target="_blank" class="toolbar-item svg-wrapper">
         <img src="https://res.cloudinary.com/dho8ay2wz/image/upload/v1723402451/esteveslisboeta-site/youtube-red_qeizlc.svg" alt="Instagram" class="toolbar-icon">
       </a>
     </div>
@@ -44,7 +44,7 @@
             masterizou e misturou o EP (a excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta).
             Gabriel Silva fez a preparação de mistura na "Inesquecível Inês".
             El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa".
-            Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina Wykowska.
+            Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina.
           </div>
           <div class="horizontal-scrolling-items__item">
             &nbsp &nbsp &nbsp <b>SABES QUE ADORO SAIR CONTIGO</b> é o 1º EP de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
@@ -52,7 +52,7 @@
             masterizou e misturou o EP (a excepção é a "Canção da Meretriz", misturada por Esteves Lisboeta).
             Gabriel Silva fez a preparação de mistura na "Inesquecível Inês".
             El Appleton escreveu as primeiras duas quadras do poema "Numa Travessa Perdida de Lisboa".
-            Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina Wykowska.
+            Carlota Leite tirou as fotografias da capa e contra-capa e a edição e o lettering é da Paulina.
           </div>
         </div>
       </div>
