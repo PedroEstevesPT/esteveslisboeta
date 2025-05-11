@@ -96,8 +96,8 @@
     }
   
     .toolbar-icon {
-      width: 48px;
-      height: 48px;
+      width: 30px;
+      height: 30px;
     }
   }
   </style>

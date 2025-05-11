@@ -4,9 +4,9 @@ import Collab from './views/CollabPage.vue'
 import Discography from './views/DiscographyPage.vue'
 
 const routes = [
-  { path: '/', component: Landing },
-  { path: '/collab', component: Collab },
-  { path: '/discography', component: Discography }
+  { path: '/', component: Landing ,                name : 'Landing'                },
+  { path: '/collab', component: Collab,            name: 'Collab'          },
+  { path: '/discography', component: Discography,  name: 'Discography' }
 ]
 
 const router = createRouter({

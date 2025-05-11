@@ -64,9 +64,12 @@
             </li>
           </ul>
         </section>
+
       </div>
     </div>
+    
   </div>
+  
 </template>
 
 
@@ -74,6 +77,7 @@
 import { reactive } from 'vue'
 import Hamburguer from '../components/Hamburguer.vue'
 import RotatingCard from '../components/RotatingCard.vue'
+import Socials from '../components/Socials.vue'
 
 const expanded = reactive({})
 
@@ -143,27 +147,10 @@ const albums = [
 
 <style scoped>
 
-/* Base Styles */
+/* ========== Base Reset ========== */
 * {
   box-sizing: border-box;
 }
-
-.songwriter {
-  color: #ffffff;
-  font-size: 0.8rem;
-  font-weight: normal;
-  text-align: left; /* Ensures the text aligns left */
-  align-self: flex-start; /* Ensures it aligns left inside a flex column */
-}
-
-.songwriter {
-  color: #ffffff;
-  font-size: 0.8rem;
-  font-weight: normal;
-  text-align: left; /* Ensures the text aligns left */
-  align-self: flex-start; /* Ensures it aligns left inside a flex column */
-}
-
 
 html, body {
   margin: 0;
@@ -173,13 +160,40 @@ html, body {
   overflow-x: hidden;
 }
 
+.mobile-only {
+  display: none;
+}
+
+/* ========== Layout Containers ========== */
 .app-wrapper {
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* Background video */
+.page-container {
+  position: relative;
+  padding: 2rem 1rem;
+  z-index: 2;
+}
+
+.discografia-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .discografia-container {
+    margin-top: 3rem;
+  }
+
+  .page-title {
+    display: none;
+  }
+}
+
+/* ========== Background Video ========== */
 #background-video {
   position: fixed;
   top: 0;
@@ -190,61 +204,13 @@ html, body {
   z-index: -1;
 }
 
-/* Foreground Content */
-.page-container {
-  position: relative;
-  padding: 2rem 1rem;
-  z-index: 2;
-}
-
-.discografia-container {
-  max-width: 900px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-/* Existing styles (same as before)... */
+/* ========== Typography ========== */
 .page-title {
   color: white;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
   font-weight: bold;
-}
-
-.album-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
-  justify-content: center;
-  text-align: center;
-}
-
-.album-cover {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.album-info {
-  flex: 1;
-  min-width: 240px;
-  max-width: 600px;
-}
-
-.track-title {
-  color: white;
-
-}
-
-.track-title-wrapper {
-  display: flex;
-  flex-direction: column;
-  color: white;
 }
 
 .album-title {
@@ -259,6 +225,51 @@ html, body {
   margin-bottom: 1rem;
 }
 
+.track-title {
+  color: white;
+}
+
+.track-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.songwriter {
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: normal;
+  text-align: left;
+  align-self: flex-start;
+}
+
+/* ========== Album Layout ========== */
+.album-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.album-cover {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.album-info {
+  flex: 1;
+  min-width: 240px;
+  max-width: 600px;
+  text-align: left;
+}
+
+/* ========== Album Links ========== */
 .album-links {
   display: flex;
   justify-content: center;
@@ -278,6 +289,7 @@ html, body {
   transform: scale(1.2);
 }
 
+/* ========== Tracklist ========== */
 .tracklist {
   list-style: none;
   padding: 0;
@@ -296,28 +308,28 @@ html, body {
   font-size: 1.1rem;
 }
 
+.toggle-icon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* ========== Lyrics ========== */
 .lyrics {
   margin-top: 0.5rem;
   font-size: 0.95rem;
   color: #333;
-  white-space: pre-wrap;
   text-align: center;
+  white-space: pre-wrap;
 }
 
 .lyrics-text {
   color: white;
-
   font-family: monospace;
   text-align: center;
   white-space: pre-wrap;
 }
 
-.toggle-icon {
-  font-size: 1.5rem;
-  color: white;
-
-}
-
+/* ========== Responsive Styles ========== */
 @media (max-width: 768px) {
   .album-header {
     flex-direction: column;
@@ -327,6 +339,12 @@ html, body {
   .album-info {
     text-align: center;
   }
+
+  .mobile-only {
+    display: block;
+    position: relative;
+  }
+
 
   .page-title {
     font-size: 2rem;
@@ -348,19 +366,18 @@ html, body {
     font-size: 0.85rem;
     padding: 0 1rem;
   }
-}
 
-@media (min-width: 1024px) {
-
-.discografia-container {
-  margin-top: 3rem; /* or try 4rem if you want it more spaced */
+  .mobile-socials-bottom {
+    position: fixed;
+    bottom: 2vh;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+  }
 }
-
-.page-title {
-  display: none;
-}
-}
-
 
 
 </style>

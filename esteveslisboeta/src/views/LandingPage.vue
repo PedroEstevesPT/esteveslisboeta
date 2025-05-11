@@ -51,7 +51,6 @@
         
       </div> 
       <br>
-      <Socials class="mobile-socials-bottom mobile-only" />
 
       </div>
 
@@ -66,7 +65,6 @@
 
     import RotatingCard from '../components/RotatingCard.vue'
     import Hamburguer from '../components/Hamburguer.vue'
-    import Socials from '../components/Socials.vue'
 
     import { ref } from 'vue'
 
@@ -106,13 +104,6 @@
 }
 
 
-/* Ensure socials align vertically */
-.socials-toolbar-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-left: 16px;
-}
 
 
   @font-face {
@@ -171,13 +162,6 @@ html, body, #app {
   gap: 30px; /* space between card and carousel */
 }
 
-
-.socials-container {
-  margin-top: auto; /* Push to bottom */
-  display: flex;
-  justify-content: center;
-  padding-bottom: 10px; /* Optional spacing */
-}
 
 
 /* Background video that covers the entire viewport */
