@@ -5,11 +5,7 @@
       <source src="https://res.cloudinary.com/dho8ay2wz/video/upload/v1746924667/color-grading-bom_wkaf6c.mp4" type="video/mp4">
     </video>
 
-  <div class="app-wrapper">
-    <!-- Background Video -->
-    <video autoplay muted loop id="background-video">
-      <source src="https://res.cloudinary.com/dho8ay2wz/video/upload/v1746924667/color-grading-bom_wkaf6c.mp4" type="video/mp4">
-    </video>
+
 
 
     <!-- Page Content -->
@@ -22,7 +18,18 @@
 
           <div class="album-header">
 
-            <img :src="album.cover" :alt="album.title" class="album-cover" />
+
+
+            <div style="max-width: 300px; width: 100%;">
+            <RotatingCard
+              :frontImg="album.cover"
+              :backImg="album.backCover"
+              :frontAlt="album.title"
+              :backAlt="album.title"
+            />
+          </div>
+
+
             <div class="album-info">
               <h2 class="album-title">{{ album.title }}</h2>
               <p class="album-description">{{ album.description }}</p>
@@ -60,13 +67,13 @@
       </div>
     </div>
   </div>
-  </div>
 </template>
 
 
 <script setup>
 import { reactive } from 'vue'
 import Hamburguer from '../components/Hamburguer.vue'
+import RotatingCard from '../components/RotatingCard.vue'
 
 const expanded = reactive({})
 
@@ -83,6 +90,7 @@ const albums = [
   {
     title: "Sabes Que Adoro Sair Contigo",
     cover: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1724005660/esteveslisboeta-site/nzzdvqu043viblg5xih1.jpg",
+    backCover: "https://res.cloudinary.com/dho8ay2wz/image/upload/v1724005665/esteveslisboeta-site/kdajhtnq9w8r2yok8hjb.jpg",
     description: "1º EP com 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta.",
     links: [
       {
