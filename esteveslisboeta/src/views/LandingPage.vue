@@ -48,8 +48,11 @@
             </div>
           </div>
         </div>
+        
+      </div> 
+      <br>
+      <Socials class="mobile-socials-bottom mobile-only" />
 
-      </div>
       </div>
 
     </div>
@@ -77,6 +80,19 @@
   
   <style scoped>
  
+  @media (max-width: 768px) {
+  .mobile-socials-bottom {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+}
+
   /* Transparent Top Toolbar for Desktop */
 .top-toolbar {
   background-color: transparent !important;
