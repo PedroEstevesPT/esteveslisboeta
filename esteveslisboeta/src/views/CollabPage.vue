@@ -11,22 +11,27 @@
         <!-- Vuetify Card Centered -->
         <v-card class="collab-card" elevation="10" rounded="xl">
           <v-card-title class="text-h5 font-weight-bold text-center">
-            Colaborações Musicais
+            Collab
           </v-card-title>
           <v-card-text class="text-center">
             Para colaborar em canções, tocar guitarra ou baixo, manda-me uma mensagem no Instagram!
           </v-card-text>
+
           <v-card-actions class="justify-center">
-            <v-btn
-              color="#0f9cdd"
-              href="https://www.instagram.com/esteves.lisboeta"
-              target="_blank"
-              variant="flat"
-              class="text-white font-weight-bold"
-            >
-              Instagram
-            </v-btn>
+            <a
+  href="https://www.instagram.com/esteves.lisboeta/"
+  target="_blank"
+  class="toolbar-item svg-wrapper"
+>
+  <img
+    src="https://res.cloudinary.com/dho8ay2wz/image/upload/v1723412632/instagram_ujtrtk.png"
+    alt="Instagram"
+    class="toolbar-icon"
+  />
+</a>
           </v-card-actions>
+
+
         </v-card>
       </div>
     </div>
@@ -116,5 +121,21 @@
       font-size: 0.95rem;
     }
   }
+
+  .toolbar-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+.toolbar-icon:hover {
+  transform: scale(1.1);
+}
+
+.toolbar-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
   </style>
   

@@ -4,12 +4,67 @@
     <video autoplay muted loop id="background-video">
       <source src="https://res.cloudinary.com/dho8ay2wz/video/upload/v1746924667/color-grading-bom_wkaf6c.mp4" type="video/mp4">
     </video>
+<template>
+  <br>
+
+  <div class="app-wrapper">
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+      <source src="https://res.cloudinary.com/dho8ay2wz/video/upload/v1746924667/color-grading-bom_wkaf6c.mp4" type="video/mp4">
+    </video>
 
     <!-- Page Content -->
     <div class="page-container">
       <div class="discografia-container">
+        <!-- Hamburguer Menu and Title aligned horizontally -->
         <Hamburguer />
-        <br>
+        <h1 class="page-title">Discografia</h1>
+
+        <section v-for="album in albums" :key="album.title" class="album-section">
+          <div class="album-header">
+            <img :src="album.cover" :alt="album.title" class="album-cover" />
+            <div class="album-info">
+              <h2 class="album-title">{{ album.title }}</h2>
+              <p class="album-description">{{ album.description }}</p>
+              <div class="album-links">
+                <a
+                  v-for="link in album.links"
+                  :key="link.label"
+                  :href="link.url"
+                  target="_blank"
+                >
+                  <img
+                    :src="link.icon"
+                    :alt="link.label"
+                    class="platform-icon"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <ul class="tracklist">
+            <li v-for="(track, index) in album.tracks" :key="index" class="track">
+              <div class="track-header" @click="toggleLyrics(album.title, index)">
+                <span class="track-title">{{ track.title }}</span>
+                <span class="toggle-icon">{{ isExpanded(album.title, index) ? '−' : '+' }}</span>
+              </div>
+              <div v-if="isExpanded(album.title, index)" class="lyrics">
+                <pre class="lyrics-text">{{ track.lyrics }}</pre>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</template>
+
+    <!-- Page Content -->
+    <div class="page-container">
+      
+      <div class="discografia-container">
+        <!-- Hamburguer Menu and Title aligned horizontally -->
+        <Hamburguer />
         <h1 class="page-title">Discografia</h1>
 
         <section v-for="album in albums" :key="album.title" class="album-section">
