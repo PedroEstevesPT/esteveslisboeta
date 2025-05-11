@@ -1,58 +1,59 @@
 <template>
+  <div class="app-wrapper">
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+      <source src="https://res.cloudinary.com/dho8ay2wz/video/upload/v1746924667/color-grading-bom_wkaf6c.mp4" type="video/mp4">
+    </video>
 
-  
-  <div class="fullscreen-wrapper">
+    <!-- Page Content -->
+    <div class="page-container">
+      <div class="discografia-container">
+        <Hamburguer />
+        <br>
+        <h1 class="page-title">Discografia</h1>
 
-
-
-    <div class="discografia-container">
-
-
-      
-      <Hamburguer />
-      <br>
-      <h1 class="page-title">Discografia</h1>
-
-
-    <section v-for="album in albums" :key="album.title" class="album-section">
-      <div class="album-header">
-        <img :src="album.cover" :alt="album.title" class="album-cover" />
-        <div class="album-info">
-          <h2 class="album-title">{{ album.title }}</h2>
-          <p class="album-description">{{ album.description }}</p>
-          <div class="album-links">
-            <a
-              v-for="link in album.links"
-              :key="link.label"
-              :href="link.url"
-              target="_blank"
-            >
-              <img :src="link.icon" :alt="link.label" class="platform-icon" />
-            </a>
+        <section v-for="album in albums" :key="album.title" class="album-section">
+          <div class="album-header">
+            <img :src="album.cover" :alt="album.title" class="album-cover" />
+            <div class="album-info">
+              <h2 class="album-title">{{ album.title }}</h2>
+              <p class="album-description">{{ album.description }}</p>
+              <div class="album-links">
+                <a
+                  v-for="link in album.links"
+                  :key="link.label"
+                  :href="link.url"
+                  target="_blank"
+                >
+                  <img
+                    :src="link.icon"
+                    :alt="link.label"
+                    class="platform-icon"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
+          <ul class="tracklist">
+            <li v-for="(track, index) in album.tracks" :key="index" class="track">
+              <div class="track-header" @click="toggleLyrics(album.title, index)">
+                <span class="track-title">{{ track.title }}</span>
+                <span class="toggle-icon">{{ isExpanded(album.title, index) ? '−' : '+' }}</span>
+              </div>
+              <div v-if="isExpanded(album.title, index)" class="lyrics">
+                <pre class="lyrics-text">{{ track.lyrics }}</pre>
+              </div>
+            </li>
+          </ul>
+        </section>
       </div>
-      <ul class="tracklist">
-        <li v-for="(track, index) in album.tracks" :key="index" class="track">
-          <div class="track-header" @click="toggleLyrics(album.title, index)">
-            <span class="track-title">{{ track.title }}</span>
-            <span class="toggle-icon">{{ isExpanded(album.title, index) ? '−' : '+' }}</span>
-          </div>
-          <div v-if="isExpanded(album.title, index)" class="lyrics">
-            <pre class="lyrics-text">{{ track.lyrics }}</pre>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-  </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { reactive } from 'vue'
 import Hamburguer from '../components/Hamburguer.vue'
-import Footer from '../components/Footer.vue'
 
 const expanded = reactive({})
 
@@ -110,58 +111,57 @@ const albums = [
     ],
   },
 ]
-</script>
-<style scoped>
 
-.fullscreen-wrapper {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 1rem;
+
+</script>
+
+<style scoped>
+/* Base Styles */
+* {
   box-sizing: border-box;
-  background: #fff; /* or your desired background */
-  overflow: hidden;
 }
 
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.app-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Background video */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Foreground Content */
+.page-container {
+  position: relative;
+  padding: 2rem 1rem;
+  z-index: 2;
 }
 
 .discografia-container {
   max-width: 900px;
+  margin: 0 auto;
   width: 100%;
-  box-sizing: border-box;
 }
 
-.toolbar {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  gap: 2rem;
-  padding: 1rem 2rem;
-  background-color: #0f9cdd;
-  color: white;
-  font-weight: bold;
-  box-sizing: border-box;
-}
-
-.toolbar a {
-  color: white;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .toolbar {
-    display: none;
-  }
-}
-
-
+/* Existing styles (same as before)... */
 .page-title {
+  color: white;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -192,12 +192,19 @@ html, body {
   max-width: 600px;
 }
 
+.track-title {
+  color: white;
+
+}
+
 .album-title {
+  color: white;
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
 }
 
 .album-description {
+  color: white;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
@@ -212,6 +219,13 @@ html, body {
 .platform-icon {
   width: 28px;
   height: 28px;
+  filter: brightness(0) saturate(100%) invert(100%);
+  transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.platform-icon:hover {
+  filter: none;
+  transform: scale(1.2);
 }
 
 .tracklist {
@@ -240,17 +254,18 @@ html, body {
   text-align: center;
 }
 
-
 .lyrics-text {
-  font-family: monospace;     /* keep the machine-style font */
-  text-align: center;
-  white-space: pre-wrap; /* Keeps line breaks but allows wrapping */
-}
+  color: white;
 
+  font-family: monospace;
+  text-align: center;
+  white-space: pre-wrap;
+}
 
 .toggle-icon {
   font-size: 1.5rem;
-  color: #0f9cdd;
+  color: white;
+
 }
 
 @media (max-width: 768px) {
