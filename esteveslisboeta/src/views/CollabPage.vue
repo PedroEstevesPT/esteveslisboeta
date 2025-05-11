@@ -1,9 +1,8 @@
 <template>
     <div class="app-wrapper">
       <video autoplay muted loop id="background-video">
-        <source src="https://res.cloudinary.com/dho8ay2wz/video/upload/v1746923089/blue-back_w1v0s9.mp4" type="video/mp4">
+        <source src="https://res.cloudinary.com/dho8ay2wz/video/upload/v1746924667/color-grading-bom_wkaf6c.mp4" type="video/mp4">
         
-        Your browser does not support the video tag.
       </video>
   
       <Hamburguer />

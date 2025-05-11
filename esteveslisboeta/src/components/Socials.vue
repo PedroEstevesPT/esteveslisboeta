@@ -11,7 +11,7 @@
             alt="Instagram"
             class="toolbar-icon"
           />
-        </a>
+        </a> 
         <a
           href="https://open.spotify.com/album/7ruRgT7n8LX0HGNkMwJI8J"
           target="_blank"
@@ -80,7 +80,7 @@
   }
   
   .svg-wrapper img {
-    filter: brightness(0) saturate(100%) invert(36%) sepia(100%) saturate(1901%) hue-rotate(179deg) brightness(95%) contrast(88%);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1901%) hue-rotate(179deg) brightness(95%) contrast(88%);
     transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
   }
   

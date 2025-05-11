@@ -1,15 +1,17 @@
 <template>
 
-    <v-toolbar class="top-toolbar desktop-only transparent-toolbar" flat>
+    <v-toolbar class=" desktop-only transparent-toolbar" flat>
 
       <v-spacer />
+      
   
       <!-- Centered Menu Buttons -->
-      <div class="nav-links">
+      <div class="nav-links" >
         <v-btn to="/" class="menu-vuetify-button" text>Início</v-btn>
         <v-btn to="/discography" class="menu-vuetify-button" text>Discografia</v-btn>
-        <v-btn to="/collab" class="menu-vuetify-button" text>Collab</v-btn>
+        <v-btn to="/collab" class="menu-vuetify-button" text>Collab</v-btn> <br>
       </div>
+      
   
       <!-- Right side: Socials -->
       <div class="socials-wrapper">
@@ -42,6 +44,7 @@
   /* Ensure toolbar is hidden on small screens */
   .desktop-only {
     display: none;
+    padding-top: 5px;
   }
   
   @media (min-width: 960px) {
