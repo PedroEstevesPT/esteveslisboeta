@@ -45,7 +45,10 @@
           <ul class="tracklist">
             <li v-for="(track, index) in album.tracks" :key="index" class="track">
               <div class="track-header" @click="toggleLyrics(album.title, index)">
-                <span class="track-title">{{ track.title }}</span>
+                <div class="track-title-wrapper">
+                  <span class="track-title">{{ track.title }}</span>
+                  <div class="songwriter"><b>Letra:</b> {{ track.songwriter }}</div>
+                </div>
                 <span class="toggle-icon">{{ isExpanded(album.title, index) ? '−' : '+' }}</span>
               </div>
               <div v-if="isExpanded(album.title, index)" class="lyrics">
@@ -96,24 +99,29 @@ const albums = [
     tracks: [
       {
         title: "Canção da Meretriz",
+        songwriter: "Esteves Lisboeta",
         lyrics: "A maldita meretriz do D. Luís (queria)\nSer atriz mas não foi nada\nVi-a ontem a sangrar do nariz\nCom um nite em cada mão\nToda engasgada\nPara quem era a melhor, de casta superior\nAgora a cena está deveras...\nCom-pli-ca-da\nAntes eras o centro das atenções\nPorém puseram-te no banco (foste isolada)\nAntes contagiavas todos com as tuas ambições\nMas agora afastas multidões como uma c****\nTrocaste o palco de teatro por um monte de ilusões\nVais em direcção à décima rodada e eu...\nEstou mais perto de ir para longe\nEstou mais perto de ir para longe de ti\nEu estou mais perto de ir para longe\nMuito mais perto de ir para longe\nIsto não são só palavras, isto é um ultimato\nEu não vou ficar aqui para ver o último ato\nEu não vou ficar aqui para ver o fim desta peça\nTal desfecho não me interessa, não há nada que me impeça\nPeça por peça tombas como um dominó\nQuerias ser Ofélia e Julieta, mas agora metes dó\nVai para casa, dá o baza, pensa no que estás a fazer\nVai para casa, dá o baza, porque é que estás a tremer?\nDeve ser de andares por aí... Aos trambolhões\nPerdidas nos teus ideais e opiniões\nSe é assim que queres viver, não te irei demover\nCortamos relações, não me voltarás a ver porque eu estou...\nMais perto de ir para longe\nMais perto de ir para longe de ti\nMais perto de ir para longe\nMais perto de ir para longe de ti\nMais perto de ir para longe eu estou\nMais perto de ir para longe eu vou\nMais perto de ir para longe eu sou\nMais esperto do que tu"
       },
       {
         title: "Inesquecível Inês",
+        songwriter: "Esteves Lisboeta",
         lyrics: "Inesquecível Inês, vou dizer-te outra vez\nTu pões-me bem, fazes sentir-me como alguém\nNunca pensei.. voltar a ser feliz, refém\nMas como vês tudo se refez\n\nDá-me uma hipótese e provo-a agora\nSe chumbar então vou-me embora\nEstudar Matemática até ter prática\nPra veres que não estou à nora\nÉs a musa que me dá inspiração\nÉs a hipotenusa da minha equação\nResolvo todos os tes teus sistemas, sem problemas\nO que digo não é em vão.. são teoremas!\n\nNão há mal nenhum em esperar no fim da fila\nConsigo ordená-la com Bubblesort\n'Mas olha, esse algoritmo não vacila?\n'Tens razão vou usar um que se comporte\nA complexidade vai baixar\nE isso não poderás negar!\nO linear será logaritmo\nO Merge Sort é o melhor algoritmo\nO Merge Sort é o melhor algoritmo\n\nInesquecível Inês, vou dizer-te outra vez\nTu pões-me bem, fazes sentir-me como alguém\nNunca pensei.. sou burro okay?\nSó conto até três\nUm, dois, três, cinco Inês\n\nNão vês?\nO nosso tempo está-se a acabar\nSó quero levar-te ao altar\nNa lua de mel vamos programar\nEspero que não leves isto da forma errada\nSe a canção tiver sido inesperada\nPois esse não era de todo o meu plano\nAntes estava triste, quando surgiste eu ri mano (Riemann)\n\nNão há mal nenhum em esperar no fim da fila\nConsigo ordená-la com Bubblesort\n'Mas olha, esse algoritmo não vacila?\n'Tens razão vou usar um que se comporte\nA complexidade vai baixar\nSe não percebes então vai estudar!\nO linear será logaritmo\nO Quick Sort é o melhor algoritmo\nO Quick Sort é o melhor algoritmo\n\nInesquecível Inês, vou dizer-te outra vez\nTu pões-me bem, fazes sentir-me como alguém\nNunca pensei.. voltar a ser feliz, refém\nMas como vês, tudo se refez, Inês"
       },
       {
         title: "Sabes Que Adoro Sair Contigo",
+        songwriter: "Esteves Lisboeta",
         lyrics: "Sabes que adoro sair contigo\nPara ajudar a restauração\nPerdi a carteira e os meus sentidos\nNo Pavilhão quando agarrei na tua mão\nMas hoje proponho fazermos algo diferente\nEm vez de estarmos frente a frente a dar ao dente\nSei que queres, consigo ler-te a mente\n\nLentamente junta a tua voz\nAos acordes que trino nesta guitarra\nEm cima da cama, nós os dois a sós\nApós breves momentos algo começara\nA ganhar contornos duma nova canção\nCai no ouvido esta nossa composição\nTem tanto sentido como uma oração\n\nAgora sabes o que oiço nos transportes\nDe manhã cedo quando vou pró emprego\nSinceramente espero que não te importes\nNem que te cause nenhum desassossego\nEstar sempre a ouvir esta mesma melodia\nEla faz-me sorrir e completa-me o dia\nNem sabia a falta que me fazia"
 
       },
       {
         title: "Joana (Chamei O Teu Nome)",
+        songwriter: "Esteves Lisboeta",
         lyrics: "Joana, eu disse Joana\nAjuda-me por favor Joana\nJá não sei o que hei de fazer\nJá não sei o que hei de dizer\n\nTentei fazer por ti o que mais nenhum fazia ... mas\nTu foste ficando cada vez mais fria ... e\nAinda assim juro que repetia tudo\nDava-te a minha pessoa, tempo, energia\nSou sortudo e o mais azarado\nPor te ter encontrado, por te ter tocado\nJoana, Joana\n\nChamei o teu nome Joana\nAjuda-me por favor Joana\nJá não sei o que hei de fazer\nJá não sei o que hei de dizer\n\nEstou a ser honesto, não estou a ser dramático\nPara mim amar-te é um reflexo quase automático\nProvavelmente tu já tens outro alguém\nSe assim for manda cumprimentos à tua mãe\nEu tento seguir o meu caminho\nVou morrer sozinho\nVou morrer sozinho\n\nJoana, Joana\nJoana, chamei o teu nome Joana\nAjuda-me por favor Joana\nJá não sei o que hei de fazer\nJá não sei o que hei de dizer\nJá não sei o que hei de fazer\nJá não sei o que hei de dizer"
 ,
       },
       {
         title: "Numa Travessa Perdida de Lisboa",
+        songwriter: "Miguel Appleton/Esteves Lisboeta",
         lyrics: "Numa Travessa Perdida de Lisboa\nLá em cima sob o azul gasto das portadas\nDa janela dumas quaisquer águas-furtadas\nPousa uma gaivota como numa proa\n\nVai guiando imponente, sem vaidade\nCorta as ondas, a névoa e o peito seu\nDá branco ao mar, à terra e ao céu\nE vai comandando este navio-cidade\n\nEntre paredes forradas de azulejo\nInvade-me fatalmente uma saudade\nPor quem já não vejo há uma eternidade\nCaem lágrimas que desaguam no Tejo\n\nCom a cabeça quente do vinho tragado\nTrago numa memória o teu sеmblante\nQuem me dеra poder vê-lo doravante\nMas tu navegas em direcção ao passado\n\nNuma Travessa Perdida de Lisboa\nLá em cima sob o azul gasto das portadas\nDa janela dumas quaisquer águas-furtadas\nPousa uma gaivota como numa proa\n\nVai guiando imponente, sem vaidade\nCorta as ondas, a névoa e o peito seu\nDá branco ao mar, à terra e ao céu\nE vai comandando este navio-cidade"
 
 ,
@@ -131,6 +139,23 @@ const albums = [
 * {
   box-sizing: border-box;
 }
+
+.songwriter {
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: normal;
+  text-align: left; /* Ensures the text aligns left */
+  align-self: flex-start; /* Ensures it aligns left inside a flex column */
+}
+
+.songwriter {
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: normal;
+  text-align: left; /* Ensures the text aligns left */
+  align-self: flex-start; /* Ensures it aligns left inside a flex column */
+}
+
 
 html, body {
   margin: 0;
@@ -206,6 +231,12 @@ html, body {
 .track-title {
   color: white;
 
+}
+
+.track-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: white;
 }
 
 .album-title {
