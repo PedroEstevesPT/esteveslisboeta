@@ -9,11 +9,13 @@
       class="mobile-socials-wrapper"
     >
       <Socials />
-      <br>      <br>
-      <br>
+      
+      <br><br><br>
 
     </div>
+    
   </div>
+  
 </template>
 
 <script setup>

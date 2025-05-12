@@ -9,7 +9,7 @@
     <Hamburguer />
     <div class="wrapper">
 
-    <div class="page-container"  >  
+    <div class="page-container" >  
       <div class="main-content"  > <!-- NEW WRAPPER -->
         <br>
 
@@ -26,9 +26,9 @@
 
 
         <!-- Horizontal Scrolling Content -->
-        <div class="container animate__animated animate__fadeIn" style="width: 85vw; margin: 0 auto; display: inline-block; margin-bottom: 1%;">
+        <div class="container animate__animated animate__fadeIn" >
           <div class="horizontal-scrolling-wrapper">
-            <div class="horizontal-scrolling-items">
+            <div class="horizontal-scrolling-items" >
               <div class="horizontal-scrolling-items__item">
                 &nbsp &nbsp &nbsp <b>SABES QUE ADORO SAIR CONTIGO</b> é o 1º EP de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
                 Pedro Joaquim Borges produziu a bateria em "Joana (Chamei O Teu Nome)", kick em "Sabes Que Adoro Sair Contigo", co-produziu a percussão na "Inesquecível Inês",
