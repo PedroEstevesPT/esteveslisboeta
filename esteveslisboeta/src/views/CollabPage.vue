@@ -1,7 +1,7 @@
 <template>
     <div class="app-wrapper">
       <video autoplay muted loop id="background-video">
-        <source src="https://res.cloudinary.com/dho8ay2wz/video/upload/v1746924667/color-grading-bom_wkaf6c.mp4" type="video/mp4">
+        <source src="https://res.cloudinary.com/dho8ay2wz/video/upload/v1747009772/color-grading4_hlq08h.mp4" type="video/mp4">
         
       </video>
   
