@@ -6,7 +6,9 @@ import Discography from './views/DiscographyPage.vue'
 const routes = [
   { path: '/', component: Landing ,                name : 'Landing' },
   { path: '/collab', component: Collab,            name: 'Collab' },
-  { path: '/discography', component: Discography,  name: 'Discography' }
+  { path: '/discography', component: Discography,  name: 'Discography' },
+  { path: '/:pathMatch(.*)*', redirect: '/' }
+
 ]
 
 const router = createRouter({
