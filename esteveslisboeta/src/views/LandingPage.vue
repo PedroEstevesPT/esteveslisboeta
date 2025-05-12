@@ -138,7 +138,6 @@ html, body, #app {
   max-width: 1200px; /* Optional: limit to avoid stretch on huge screens */
   margin: 0 auto; /* Center horizontally */
   height: 90vh;
-  overflow: hidden;
 }
 
 .main-content {
@@ -162,6 +161,13 @@ html, body, #app {
   gap: 30px; /* space between card and carousel */
 }
 
+
+.socials-container {
+  margin-top: auto; /* Push to bottom */
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px; /* Optional spacing */
+}
 
 
 /* Background video that covers the entire viewport */
@@ -189,6 +195,7 @@ html, body, #app {
   align-items: center;
   z-index: 1; /* Ensures the card is above the video */
   margin-bottom: 10px; /* Space between card and toolbar */
+
 }
 
 /* Toolbar styles */
@@ -262,18 +269,18 @@ html, body, #app {
   top: 0;
   height: 100%;
   width: 20px; /* Adjust the width of the fade effect */
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); /* Adjust color and transparency */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); /* Adjust color and transparency */
   pointer-events: none; /* Ensure it does not interfere with user interactions */
 }
 
 .horizontal-scrolling-wrapper::before {
   left: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
 }
 
 .horizontal-scrolling-wrapper::after {
   right: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
 }
 
 .container {
@@ -287,7 +294,7 @@ html, body, #app {
 /* Scrolling items */
 .horizontal-scrolling-items {
   background-color: white;
-  opacity: 90%;
+  opacity: 70%;
   color: rgb(15, 156, 221); /* Change text color */
   display: flex;
   white-space: nowrap;

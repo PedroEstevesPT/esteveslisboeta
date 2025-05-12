@@ -4,11 +4,11 @@
       <div class="card">
         <!-- Front Face -->
         <div class="card-face card-front">
-          <v-img :src="frontImg" class="card-image" :alt="frontAlt"></v-img>
+          <v-img :src="frontImg" class="card-image" rounded="lg" :alt="frontAlt"></v-img>
         </div>
         <!-- Back Face -->
         <div class="card-face card-back">
-          <v-img :src="backImg" class="card-image" :alt="backAlt"></v-img>
+          <v-img :src="backImg" class="card-image" rounded="lg" :alt="backAlt"></v-img>
         </div>
       </div>
     </div>
@@ -86,6 +86,8 @@ const props = defineProps({
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 8px !important; /* Force rounded corners */
+
 }
 
 .edge-browser .card-image {
@@ -95,7 +97,7 @@ const props = defineProps({
 /* Media Queries */
 @media (max-width: 600px) {
   .card {
-    width: 80vw; 
+    width: 100vw; 
     height: auto; 
   }
 }
