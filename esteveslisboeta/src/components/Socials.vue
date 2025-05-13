@@ -46,7 +46,7 @@
         />
       </a>
     </div>
-    <p class="footer-credit">Site done by Esteves Lisboeta</p>
+<!--    <p class="footer-credit">Site done by Esteves Lisboeta</p> -->
   </div>
 </template>
   
