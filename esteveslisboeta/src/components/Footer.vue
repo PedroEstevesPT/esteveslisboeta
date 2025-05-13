@@ -22,7 +22,7 @@
   color: #333;
   border-top: 1px solid #ccc;
 }
-
+ 
 /* Hide footer on screens smaller than 768px */
 @media (max-width: 767px) {
   .indie-footer {
