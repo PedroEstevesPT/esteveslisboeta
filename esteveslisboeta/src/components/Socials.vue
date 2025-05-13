@@ -64,12 +64,13 @@
 .socials {
   width: 100%;
   display: flex;
-  flex-direction: column; /* <- Add this */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px 0;
+  padding: 0;
   position: relative;
   z-index: 1;
+  overflow: hidden; /* Prevent accidental overflow */
 }
   
   .toolbar {

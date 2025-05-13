@@ -6,9 +6,8 @@
         <router-link to="/discography" class="footer-link">Discografia</router-link>
         <span class="divider">.</span>
         <router-link to="/collab" class="footer-link">Collab</router-link>
-        
       </div>
-      <p class="footer-text">Website feito por Esteves · Lisboeta, {{ new Date().getFullYear() }}</p>
+     <!-- <p class="footer-text">Website feito por Esteves · Lisboeta, {{ new Date().getFullYear() }}</p> -->
     </footer>
   </template>
   
