@@ -78,12 +78,8 @@
 
               <!-- Spotify Embed -->
 <div
-  style="
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 8px;
-  "
+  v-if="isSpotifyVisible(album.title, index)"
+  style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border-radius: 12px; padding: 8px;"
 >
   <iframe
     style="border-radius: 12px;"
