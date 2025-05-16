@@ -44,6 +44,7 @@ const props = defineProps({
   max-width: 100%; 
   display: flex; 
   justify-content: center; 
+  
 }
 
 .card {
@@ -54,6 +55,7 @@ const props = defineProps({
   transition: transform 0.6s;
   transform-style: preserve-3d;
   position: relative;
+  will-change: transform; /* Trigger GPU acceleration */
   transform-origin: center center;
 }
 
