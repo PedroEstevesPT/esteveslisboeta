@@ -58,7 +58,8 @@
                     @click.stop="toggleSpotify(album.title, index)"
                     title="Play on Spotify"
                   >
-                    🎵
+                  <br>
+                    {{ isSpotifyVisible(album.title, index) ? '🔊' : '🎵' }}  &thinsp;
                   </span>
                   <span
                     class="toggle-icon"
@@ -76,17 +77,23 @@
               </div>
 
               <!-- Spotify Embed -->
-              <div v-if="isSpotifyVisible(album.title, index)" class="spotify-embed">
-                <iframe
-                  style="border-radius:12px"
-                  width="100%"
-                  height="80"
-                  :src="getSpotifyEmbedURL(track.spotify)"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                ></iframe>
-              </div>
+<div
+  style="
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 8px;
+  "
+>
+  <iframe
+    style="border-radius: 12px;"
+    width="100%"
+    height="80"
+    :src="getSpotifyEmbedURL(track.spotify)"
+    frameborder="0"
+    allow="encrypted-media"
+  ></iframe>
+</div>
             </li>
           </ul>
         </section>
@@ -422,6 +429,7 @@ html, body {
     padding: 30px 0;
   }
 }
+
 
 
 </style>
