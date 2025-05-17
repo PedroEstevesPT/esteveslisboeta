@@ -46,10 +46,20 @@
         />
       </a>
     </div>
-   <p class="footer-credit">Website realizado por Esteves Lisboeta</p> 
+    <FooterCredit />
   </div>
 </template>
   
+<script>
+import FooterCredit from './FooterCredit.vue'
+
+export default {
+  components: {
+    FooterCredit
+  }
+}
+</script>
+
   <style scoped>
 
 

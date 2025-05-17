@@ -11,9 +11,13 @@
       <Socials />
       
       <br><br><br>
-
     </div>
-    
+
+
+    <!-- Desktop-only footer -->
+    <p class="footer-credit-desktop">Website realizado por Esteves Lisboeta</p>
+
+
   </div>
   
 </template>
@@ -141,4 +145,28 @@ html, body {
     display: flex;
   }
 }
+
+.footer-credit-desktop {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+  opacity: 0.7;
+  margin: 0;
+  padding: 8px 0;
+  background-color: transparent;
+  pointer-events: none;
+  display: none;
+  z-index: 99; /* Just below the socials */
+}
+
+@media (min-width: 769px) {
+  .footer-credit-desktop {
+    display: block;
+  }
+}
+
 </style>
