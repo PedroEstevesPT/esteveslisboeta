@@ -10,24 +10,24 @@
     <div class="wrapper">
 
     <div class="page-container" >  
-      <div class="main-content"  > <!-- NEW WRAPPER -->
+      <div class="main-content"  
+  > <!-- NEW WRAPPER -->
         <br>
 
         <!-- Rotating Card Component -->
-        <div class="rotating-card-container">
+        <div class="rotating-card-container" >
           <RotatingCard
             class="animate__animated animate__fadeIn"
             frontImg="https://res.cloudinary.com/dho8ay2wz/image/upload/v1724005660/esteveslisboeta-site/nzzdvqu043viblg5xih1.jpg"
             backImg="https://res.cloudinary.com/dho8ay2wz/image/upload/v1724005665/esteveslisboeta-site/kdajhtnq9w8r2yok8hjb.jpg"
             frontAlt="Front of Card"
             backAlt="Back of Card"
-          />
-        </div>
+         /> <br>
 
 
         <!-- Horizontal Scrolling Content -->
         <div class="container animate__animated animate__fadeIn" >
-          <div class="horizontal-scrolling-wrapper">
+          <div class="horizontal-scrolling-wrapper"> 
             <div class="horizontal-scrolling-items" >
               <div class="horizontal-scrolling-items__item">
                 &nbsp &nbsp &nbsp <b>SABES QUE ADORO SAIR CONTIGO</b> é o 1º EP de Esteves Lisboeta. 5 canções originais arranjadas, cantadas e tocadas por Esteves Lisboeta. 
@@ -48,6 +48,10 @@
             </div>
           </div>
         </div>
+
+        </div>
+
+
         
       </div> 
       <br>
@@ -128,6 +132,7 @@ html, body, #app {
 /* Page container to hold the video and card */
 /* Fix height of main content area */
 .page-container {
+    padding-top: 48px; /* same height as navbar */
   display: flex;
   flex-direction: column;
   justify-content: center;

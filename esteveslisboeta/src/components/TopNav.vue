@@ -1,4 +1,5 @@
 <template>
+  <nav class="top-toolbar">
 
     <v-toolbar class=" desktop-only transparent-toolbar" flat>
 
@@ -20,6 +21,8 @@
   
       <v-spacer />
     </v-toolbar>
+      </nav>
+
   </template>
   
   <script setup>
@@ -27,6 +30,22 @@
   </script>
   
   <style scoped>
+  
+  .top-toolbar {
+  position: fixed;       /* Fix navbar at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;          /* Set the navbar height */
+  z-index: 1000;         /* Ensure it's above other content */
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  box-shadow: none;      /* Optional */
+}
+  
+  
+  
   /* Make the toolbar occupy 0 height and position it absolutely */
   .v-toolbar {
     display: flex;
