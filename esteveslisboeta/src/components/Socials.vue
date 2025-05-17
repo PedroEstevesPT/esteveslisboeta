@@ -46,7 +46,7 @@
         />
       </a>
     </div>
-<!--    <p class="footer-credit">Site done by Esteves Lisboeta</p> -->
+   <p class="footer-credit">Website por Esteves Lisboeta</p> 
   </div>
 </template>
   
@@ -59,7 +59,16 @@
   font-size: 0.9rem;
   color: white;
   opacity: 0.7;
+  display: none; /* Hidden by default */
 }
+
+/* Show only on screens 768px or smaller */
+@media (max-width: 768px) {
+  .footer-credit {
+    display: block;
+  }
+}
+
 
 .socials {
   width: 100%;
