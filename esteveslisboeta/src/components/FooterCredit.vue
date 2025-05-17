@@ -1,5 +1,5 @@
 <template>
-  <p class="footer-credit">Website realizado por Esteves Lisboeta</p>
+  <p class="footer-credit">Website realizado por P. Esteves</p>
 </template>
 
 <style scoped>
