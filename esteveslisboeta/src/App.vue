@@ -15,7 +15,7 @@
 
 
     <!-- Desktop-only footer -->
-    <p class="footer-credit-desktop">Website realizado por Esteves Lisboeta</p>
+    <p class="footer-credit-desktop">Website realizado por P.Esteves</p>
 
 
   </div>
