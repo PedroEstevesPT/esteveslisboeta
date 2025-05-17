@@ -46,7 +46,7 @@
         />
       </a>
     </div>
-   <p class="footer-credit">Website por Esteves Lisboeta</p> 
+   <p class="footer-credit">Website realizado por Esteves Lisboeta</p> 
   </div>
 </template>
   
