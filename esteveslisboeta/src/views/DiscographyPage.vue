@@ -8,7 +8,7 @@
     <!-- Page Content -->
     <div class="page-container">
       <div class="discografia-container">
-        <Hamburguer />
+       <!-- <Hamburguer /> -->
         <h1 class="page-title">Discografia</h1>
 
         <section v-for="album in albums" :key="album.title" class="album-section">

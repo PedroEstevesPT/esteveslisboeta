@@ -26,7 +26,7 @@
     display: none;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .mobile-menu {
       display: flex;
       position: absolute;

@@ -21,12 +21,19 @@
   
       <v-spacer />
     </v-toolbar>
-      </nav>
 
+
+  <!-- Mobile toolbar: only shows the hamburger icon -->
+  <div class="mobile-toolbar">
+    <Hamburguer />
+  </div>
+
+  </nav>
   </template>
   
   <script setup>
   import Socials from './Socials.vue'
+  import Hamburguer from './Hamburguer.vue'
   </script>
   
   <style scoped>
@@ -66,7 +73,7 @@
     padding-top: 5px;
   }
   
-  @media (min-width: 960px) {
+  @media (min-width: 1025px) {
     .desktop-only {
       display: flex !important; /* Show the toolbar on medium devices and up */
     }
@@ -101,4 +108,19 @@
   .menu-vuetify-button:hover {
     color: yellow !important;
   }
+
+  /* === MOBILE TOOLBAR === */
+.mobile-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 16px;
+  height: 48px;
+}
+
+@media (min-width: 1025px) {
+  .mobile-toolbar {
+    display: none;
+  }
+}
   </style>
