@@ -477,4 +477,23 @@ html, body, #app {
   padding: 0 10px;
 }
 
+
+
+/* Media Query for Laptops */
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .page-container { justify-content: center; }
+  .rotating-card-container {
+    filter: none;
+    margin-bottom: 40px;
+    /* small push-down so it always sits below the navbar */
+    margin-top: 1.2vh;
+  }
+}
+
+
+
+.toolbar { margin-bottom: 40px; }
+
+
+
   </style>

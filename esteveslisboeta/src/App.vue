@@ -1,7 +1,10 @@
 <template>
   <div>
     <TopNav />
-    <router-view />
+
+    <div class="content-container">
+        <router-view />
+    </div>
 
     <!-- Show only on mobile and when user is at bottom -->
     <div
@@ -15,7 +18,7 @@
 
 
     <!-- Desktop-only footer -->
-    <p class="footer-credit-desktop">Website realizado por P.Esteves</p>
+    <p class="footer-credit-desktop">Website realizado por Pedro Esteves</p>
 
 
   </div>
@@ -99,6 +102,8 @@ html, body {
   position: relative;
   min-height: 100vh;
 }
+
+
 
 .mobile-only {
   display: block;

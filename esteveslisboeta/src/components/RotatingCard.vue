@@ -16,25 +16,28 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps, onMounted } from 'vue'
 
 const props = defineProps({
-  frontImg: {
-    type: String,
-    required: true,
-  },
-  backImg: {
-    type: String,
-    required: true,
-  },
-  frontAlt: {
-    type: String,
-    default: 'Front Image',
-  },
-  backAlt: {
-    type: String,
-    default: 'Back Image',
+  frontImg: { type: String, required: true },
+  backImg: { type: String, required: true },
+  frontAlt: { type: String, default: 'Front Image' },
+  backAlt: { type: String, default: 'Back Image' }
+})
+
+onMounted(() => {
+  function detectZoom() {
+    // Detect zoom by comparing window.devicePixelRatio (works for most browsers)
+    const zoom = window.devicePixelRatio || 1
+    // Add 'zoomed' class if zoom is roughly 1.1 or 1.25 (110% or 125%)
+    if (zoom >= 1.09 && zoom <= 1.15 || zoom >= 1.24 && zoom <= 1.26) {
+      document.documentElement.classList.add('zoomed')
+    } else {
+      document.documentElement.classList.remove('zoomed')
+    }
   }
+  detectZoom()
+  window.addEventListener('resize', detectZoom)
 })
 </script>
 
@@ -44,7 +47,6 @@ const props = defineProps({
   max-width: 100%; 
   display: flex; 
   justify-content: center; 
-  
 }
 
 .card {
@@ -55,7 +57,7 @@ const props = defineProps({
   transition: transform 0.6s;
   transform-style: preserve-3d;
   position: relative;
-  will-change: transform; /* Trigger GPU acceleration */
+  will-change: transform;
   transform-origin: center center;
 }
 
@@ -88,48 +90,55 @@ const props = defineProps({
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px !important; /* Force rounded corners */
-
+  border-radius: 8px !important;
 }
 
 .edge-browser .card-image {
-  filter: brightness(1.1); /* Adjust for Edge */
+  filter: brightness(1.1);
 }
 
 /* Media Queries */
 @media (max-width: 600px) {
   .card {
-    width: 100vw; 
-    height: auto; 
+    width: 100vw;
+    height: auto;
+  }
+  /* no margin-top on mobile */
+}
+
+/* Desktop & laptop screens */
+@media (min-width: 601px) {
+  .card {
+    height: auto;
   }
 }
 
+/* Desktop zoom margin - apply margin-top only if zoomed */
+@media (min-width: 601px) {
+  html.zoomed .card-container {
+    margin-top: 0.5rem; /* small subtle spacing */
+  }
+}
+
+/* Width-based sizing */
 @media (min-width: 601px) and (max-width: 1020px) {
   .card {
-    width: 50vw; 
-    height: auto; 
+    width: 50vw;
   }
 }
-
 @media (min-width: 1021px) and (max-width: 1399px) {
   .card {
-    width: 34vw; 
-    height: auto; 
+    width: 34vw;
   }
 }
-
-
 @media (min-width: 1400px) and (max-width: 1920px) {
   .card {
-    width: 31vw; 
-    height: auto; 
+    width: 31vw;
   }
 }
-
 @media (min-width: 1920px) and (max-width: 5024px) {
   .card {
-    width: 35vw; 
-    height: auto; 
+    width: 35vw;
   }
 }
 </style>
