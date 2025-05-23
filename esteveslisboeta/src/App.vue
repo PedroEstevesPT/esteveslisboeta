@@ -18,7 +18,9 @@
 
 
     <!-- Desktop-only footer -->
-    <p class="footer-credit-desktop">Website realizado por Pedro Esteves</p>
+    <p class="footer-credit-desktop">  
+      Website realizado por Pedro Esteves
+    </p>
 
 
   </div>

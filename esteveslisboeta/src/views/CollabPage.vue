@@ -10,12 +10,18 @@
       <div class="page-container" >
         <!-- Vuetify Card Centered -->
         <v-card class="collab-card" elevation="10" rounded="xl">
-          <v-card-title class="text-h5 font-weight-bold text-center">
-            Collab
-          </v-card-title>
-          <v-card-text class="text-center">
-            Para colaborar em canções, tocar guitarra ou baixo, manda-me uma mensagem no Instagram!
-          </v-card-text>
+<v-card-title class="text-h5 font-weight-bold text-center">
+  <span class="rainbow-hover" :data-text="'Collab'">Collab</span>
+</v-card-title>
+
+<v-card-text class="text-center">
+  <span
+    class="rainbow-hover"
+    :data-text="'Para colaborar em canções, tocar guitarra ou baixo, manda-me uma mensagem no Instagram!'"
+  >
+    Para colaborar em canções, tocar guitarra ou baixo, manda-me uma mensagem no Instagram!
+  </span>
+</v-card-text>
 
           <v-card-actions class="justify-center">
             <a
@@ -42,7 +48,6 @@
   import RotatingCard from '../components/RotatingCard.vue'
   import Hamburguer from '../components/Hamburguer.vue'
   import Socials from '../components/Socials.vue'
-  
   import { ref } from 'vue'
   
   const isMenuOpen = ref(false)
@@ -137,5 +142,9 @@
   align-items: center;
   justify-content: center;
 }
+
+
+
+
   </style>
   

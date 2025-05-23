@@ -6,7 +6,7 @@
     </video>
 
     <!-- Page Content -->
-    <div class="page-container">
+    <div class="page-container "> 
       <div class="discografia-container">
        <!-- <Hamburguer /> -->
         <h1 class="page-title">Discografia</h1>
@@ -23,8 +23,8 @@
             </div>
 
             <div class="album-info">
-              <h2 class="album-title">{{ album.title }}</h2>
-              <p class="album-description">{{ album.description }}</p>
+              <h2 class="album-title rainbow-hover">{{ album.title }}</h2>
+              <p class="album-description rainbow-hover">{{ album.description }}</p>
               <div class="album-links">
                 <a
                   v-for="link in album.links"
@@ -49,8 +49,8 @@
                   class="track-title-wrapper"
                   @click="toggleLyrics(album.title, index)"
                 >
-                  <span class="track-title">{{ track.title }}</span>
-                  <div class="songwriter"><b>Letra:</b> {{ track.songwriter }}</div>
+                  <span class="track-title rainbow-hover">{{ track.title }}</span>
+                  <div class="songwriter rainbow-hover"><b>Letra:</b> {{ track.songwriter }}</div>
                 </div>
                 <div class="track-icons">
                   <span
@@ -62,7 +62,7 @@
                     {{ isSpotifyVisible(album.title, index) ? '🔊' : '🎵' }}  &thinsp;
                   </span>
                   <span
-                    class="toggle-icon"
+                    class="toggle-icon rainbow-hover"
                     @click.stop="toggleLyrics(album.title, index)"
                     title="Show/Hide Lyrics"
                   >
@@ -102,6 +102,7 @@
 import { reactive } from 'vue'
 import Hamburguer from '../components/Hamburguer.vue'
 import RotatingCard from '../components/RotatingCard.vue'
+import '../assets/global.css'
 
 const expanded = reactive({})
 
