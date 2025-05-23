@@ -49,7 +49,7 @@
     <FooterCredit />
   </div>
 </template>
-  
+
 <script>
 import FooterCredit from './FooterCredit.vue'
 
@@ -60,25 +60,21 @@ export default {
 }
 </script>
 
-  <style scoped>
-
-
+<style scoped>
 .footer-credit {
   margin-top: 12px;
   text-align: center;
   font-size: 0.9rem;
   color: white;
   opacity: 0.7;
-  display: none; /* Hidden by default */
+  display: none;
 }
 
-/* Show only on screens 768px or smaller */
 @media (max-width: 768px) {
   .footer-credit {
     display: block;
   }
 }
-
 
 .socials {
   width: 100%;
@@ -89,47 +85,56 @@ export default {
   padding: 0;
   position: relative;
   z-index: 1;
-  overflow: hidden; /* Prevent accidental overflow */
+  overflow: visible; /* <-- FIXED: allow icons to grow without being cut */
 }
-  
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  overflow: visible; /* <-- Ensure nothing inside gets clipped */
+}
+
+.toolbar-item {
+  display: inline-block;
+}
+
+.svg-wrapper {
+  padding: 4px; /* Optional padding to give space for scaling */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.toolbar-icon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.svg-wrapper img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1901%) hue-rotate(179deg) brightness(95%) contrast(88%);
+  transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.svg-wrapper:hover img {
+  filter: none;
+  transform: scale(1.2);
+  transform-origin: center center;
+}
+
+@media (max-width: 768px) {
   .toolbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 16px;
   }
-  
-  .toolbar-item {
-    display: inline-block;
-  }
-  
+
   .toolbar-icon {
-    width: 25px;
-    height: 25px;
-    object-fit: contain;
-    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+    width: 30px;
+    height: 30px;
   }
-  
-  .svg-wrapper img {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1901%) hue-rotate(179deg) brightness(95%) contrast(88%);
-    transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
-  }
-  
-  .svg-wrapper:hover img {
-    filter: none;
-    transform: scale(1.2);
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .toolbar {
-      gap: 16px;
-    }
-  
-    .toolbar-icon {
-      width: 30px;
-      height: 30px;
-    }
-  }
-  </style>
+}
+</style>
